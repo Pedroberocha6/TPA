@@ -1,3 +1,4 @@
+/*
 //Exemplo de código para montar a primeira arvore binária
 //Neste exemplo também teremos leitura de arquivos CSV e manipulação de strings
 #include <cstdio>
@@ -175,3 +176,4 @@ int main(){
     system("pause");
     return 0;
 }
+*/
