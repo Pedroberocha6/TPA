@@ -46,7 +46,34 @@ void adicionarAluno(Aluno* novo) {
         a.inicio = novo;
         a.fim = novo;
     } else {
-        //mexeraqui
+        
+        Aluno* atual = a.inicio;
+        while (atual != NULL && strcmp(atual->nome, novo->nome) < 0 ){
+
+            atual = atual->prox;
+            }
+
+        if (atual == NULL){
+                
+                a.fim->prox = novo;
+                novo->ante = a.fim;
+                a.fim = novo;
+
+
+            }else if(atual == a.inicio){
+                novo->ante = NULL;
+                novo->prox = atual;
+                atual->ante = novo;
+                a.inicio = novo;
+            }else{
+
+                novo->prox = atual;
+                novo->ante = atual->ante;
+                atual->ante = novo;
+                novo->ante->prox = novo;
+                
+            }
+
 
     }
 
